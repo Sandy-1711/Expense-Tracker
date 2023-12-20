@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client"
 import { revalidatePath } from "next/cache";
-import Button from "./Buttom";
+import Button from "./Button";
 const prisma = new PrismaClient();
 export default async function Page() {
   var data = await prisma.expense.findMany();
