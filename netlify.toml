@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"  # or whatever your build command is
+  functions = "lambda"  # or your serverless functions directory
+
+[build.environment]
+  NETLIFY = true
+
+[dev]
+  command = "npm run dev"
