@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "^2.0.13",
     "@prisma/client": "^5.7.1",
-    "@supabase/supabase-js": "^2.39.1",
     "next": "14.0.4",
-    "next-auth": "^4.24.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-redux": "^9.0.4"
   },
   "devDependencies": {
     "@types/node": "^20",
