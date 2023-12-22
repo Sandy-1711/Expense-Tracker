@@ -24,11 +24,15 @@ export default async function Page() {
     } = getKindeServerSession();
     const auth = await isAuthenticated();
     const user = await getUser();
-    var data = await prisma.expense.findMany({
-        where: {
-            userId: user?.id,
-        }
-    });
+    var data;
+    if (auth) {
+
+        data = await prisma.expense.findMany({
+            where: {
+                userId: user?.id,
+            }
+        });
+    }
 
     async function pushData(formData: FormData) {
         "use server"
