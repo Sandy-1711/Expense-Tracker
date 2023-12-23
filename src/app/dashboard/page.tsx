@@ -57,7 +57,7 @@ export default async function Page() {
         // prisma.$disconnect();
 
     }
-    return !auth ? redirect('/') : <div className="relative w-full h-screen bg-white flex justify-center items-center flex-col gap-5">
+    return !auth ? redirect('/') : <div className="relative w-full h-screen bg-white flex justify-start items-center flex-col gap-5">
         <div className="absolute top-4 left-4 flex items-center justify-center gap-4">
             <img className="rounded-full object-center" height={40} width={40} src={user?.picture as string} alt="profile pic" />
             <span className=" max-xd:hidden text-black">{user?.given_name} {user?.family_name} - {user?.email}</span>
@@ -67,7 +67,7 @@ export default async function Page() {
             <h2 className="xd:hidden text-black">Hello, {user?.given_name}</h2>
         </div>
         <LogoutLink className="absolute px-5 py-2 rounded-md top-4 right-4 text-white bg-blue-500">Logout</LogoutLink>
-        <form action={pushData} className=" w-[300px] shadow-md flex flex-col bg-slate-100 rounded-md p-6 py-10 gap-2">
+        <form action={pushData} className=" mt-28 w-[300px] shadow-md flex flex-col bg-slate-100 rounded-md p-6 py-10 gap-2">
             <input className="text-black p-2" type="text" placeholder="Name" name="name"></input>
             <input className="p-2 text-black" type="number" placeholder="Expense" name="amount"></input>
             <button className="rounded-md py-1 px-5 bg-blue-500">Submit</button>
