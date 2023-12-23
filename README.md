@@ -7,5 +7,5 @@ Tech Stacks
 4. Typescript
 
 
-Deployed on Netlify
-[Live Link](https://expensetracker-next.netlify.app/)
+Deployed on Vercel
+[Live Link](https://expense-tracker-alpha-amber.vercel.app/)
