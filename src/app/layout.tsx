@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.16/build/spline-viewer.js"></script>
+        <script async type="module" src="https://unpkg.com/@splinetool/viewer@1.0.16/build/spline-viewer.js"></script>
       </head>
 
       <body className={inter.className}>{children}</body>
