@@ -1,6 +1,6 @@
 import { RegisterLink, LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components"
 export default function Page() {
-  return <div className="bg-white flex flex-col justify-center items-center text-black h-[100vh] w-[100vw]">
+  return <div className="bg-white flex flex-col justify-center items-center text-black h-screen w-full">
     <h1 className="text-7xl text-center font-medium mb-5">Welcome to expense tracker</h1>
     <p>Dont waste time, Login or Register fast.</p>
     <div className="flex gap-3 mt-5">

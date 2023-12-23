@@ -57,7 +57,7 @@ export default async function Page() {
         // prisma.$disconnect();
 
     }
-    return !auth ? redirect('/') : <div className="relative w-full h-[100vh] bg-white flex justify-center items-center flex-col gap-5">
+    return !auth ? redirect('/') : <div className="relative w-full h-screen bg-white flex justify-center items-center flex-col gap-5">
         <div className="absolute top-4 left-4 flex items-center justify-center gap-4">
             <img className="rounded-full object-center" height={40} width={40} src={user?.picture as string} alt="profile pic" />
             <span className="text-black">{user?.given_name} {user?.family_name} - {user?.email}</span>
