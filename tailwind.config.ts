@@ -10,6 +10,7 @@ const config: Config = {
     screens:{
       'sm':'480px',
       'md':'768px',
+      'xd':'990px',
     },
     extend: {
       backgroundImage: {

@@ -60,10 +60,12 @@ export default async function Page() {
     return !auth ? redirect('/') : <div className="relative w-full h-screen bg-white flex justify-center items-center flex-col gap-5">
         <div className="absolute top-4 left-4 flex items-center justify-center gap-4">
             <img className="rounded-full object-center" height={40} width={40} src={user?.picture as string} alt="profile pic" />
-            <span className="text-black">{user?.given_name} {user?.family_name} - {user?.email}</span>
+            <span className=" max-xd:hidden text-black">{user?.given_name} {user?.family_name} - {user?.email}</span>
         </div>
-        <h2 className="absolute top-4 left-1/2 -translate-x-1/2 text-xl text-black font-bold">Expense Tracker</h2>
-        <h1 className="">{auth}</h1>
+        <div className="absolute h-10 top-4 left-1/2 -translate-x-1/2 flex justify-center items-center">
+            <h2 className=" max-xd:hidden text-xl text-black font-bold">Expense Tracker</h2>
+            <h2 className="xd:hidden text-black">Hello, {user?.given_name}</h2>
+        </div>
         <LogoutLink className="absolute px-5 py-2 rounded-md top-4 right-4 text-white bg-blue-500">Logout</LogoutLink>
         <form action={pushData} className=" w-[300px] shadow-md flex flex-col bg-slate-100 rounded-md p-6 py-10 gap-2">
             <input className="text-black p-2" type="text" placeholder="Name" name="name"></input>
